@@ -1,7 +1,7 @@
 package com.commerce.fashion.controller;
 
-import com.commerce.fashion.Entity.RegisterCreds;
-import com.commerce.fashion.Entity.SignInCreds;
+import com.commerce.fashion.entity.RegisterCreds;
+import com.commerce.fashion.entity.SignInCreds;
 import com.commerce.fashion.enums.UserResponse;
 import com.commerce.fashion.service.UserService;
 import lombok.RequiredArgsConstructor;
