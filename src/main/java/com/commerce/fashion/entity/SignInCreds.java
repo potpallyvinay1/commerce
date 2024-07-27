@@ -16,7 +16,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NotEmpty
 @Document(collection = "userSignInDetails")
 public class SignInCreds {
-    @Indexed@Id
-    String mailId;
-    String password;
+    @Indexed
+    @Id
+    private String mailId;
+    private String password;
 }

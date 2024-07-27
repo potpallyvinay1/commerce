@@ -16,8 +16,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NotEmpty
 @Document(collection = "userRegisterationDetails")
 public class RegisterCreds {
-    @Indexed@Id
-    String mailId;
-    String password;
-    String confirmPassword;
+    @Indexed
+    @Id
+    private String mailId;
+    private String password;
+    private String confirmPassword;
+    private String mobileNumberWithCountryCode;
 }

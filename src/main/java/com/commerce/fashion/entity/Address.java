@@ -2,21 +2,24 @@ package com.commerce.fashion.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Generated;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "userAddressData")
 public class Address {
-    String Name;
-    String line1;
-    String line2;
-    String city;
-    String district;
-    Integer pinCode;
-    String state;
-    String country;
-    String mobileNumber;
+    @Id
+    private String addressId;
+    private String name;
+    private String line1;
+    private String line2;
+    private String city;
+    private String district;
+    private Integer pinCode;
+    private String state;
+    private String country;
+    private String mobileNumber;
 }
