@@ -14,11 +14,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NonNull
 @NotEmpty
-@Document(collection = "userRegisterationDetails")
+@Document(collection = "userRegistrationDetails")
 public class RegisterCreds {
     @Indexed
     @Id
     private String mailId;
+    private String userName;
     private String password;
     private String confirmPassword;
     private String mobileNumberWithCountryCode;

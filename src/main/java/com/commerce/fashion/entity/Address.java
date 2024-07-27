@@ -1,9 +1,7 @@
 package com.commerce.fashion.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Generated;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,8 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
-    @Id
-    private String addressId;
+    private boolean makeDefault;
     private String name;
     private String line1;
     private String line2;
@@ -22,4 +19,17 @@ public class Address {
     private String state;
     private String country;
     private String mobileNumber;
+
+    public Address(Address address) {
+        this.makeDefault = address.isMakeDefault();
+        this.name = address.getName();
+        this.line1 = address.getLine1();
+        this.line2 = address.getLine2();
+        this.city = address.getCity();
+        this.district = address.getDistrict();
+        this.pinCode = address.getPinCode();
+        this.state = address.getState();
+        this.country = address.getCountry();
+        this.mobileNumber = address.getMobileNumber();
+    }
 }

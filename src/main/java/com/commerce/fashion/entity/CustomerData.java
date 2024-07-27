@@ -23,8 +23,6 @@ public class CustomerData {
     @Indexed
     private String emailId;
     private String mobileNumber;
-    @JsonIgnore
     private List<Address> shippingAddress;
-    @JsonIgnore
     private List<Address> billingAddress;
 }
