@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/Fashion
+  application:
+    name: fashion
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+      base-url: /swagger-ui/
+logging:
+  file:
+    name: logs/myapp.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
